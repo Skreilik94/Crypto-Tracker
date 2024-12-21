@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #2e3842;
+    color: #ffffff;
+}
+
+/* Header Styles */
+#main-header {
+    background: #00ffcc;
+    color: #2e3842;
+    padding: 1em 0;
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#main-header nav ul li {
+    margin: 0 1em;
+}
+
+#main-header nav ul li a {
+    color: #2e3842;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Styles */
+.section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+#analytics {
+    background: linear-gradient(135deg, #2e3842 0%, #00ffcc 100%);
+}
+
+#security {
+    background: linear-gradient(135deg, #2e3842 0%, #00f0ff 100%);
+}
+
+#gamification {
+    background: linear-gradient(135deg, #2e3842 0%, #8a4fff 100%);
+}
+
+/* Footer Styles */
+#main-footer {
+    background: #1a2328;
+    text-align: center;
+    padding: 1em 0;
+    color: #b0b0b0;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Charts</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="assets/css/header.css">
+
+
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                    <!-- Header Section -->
+                    <header id="header">
+                        <h1><a href="index.html">BABA Tracker</a></h1>
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+
+    <!-- Scripts -->
+    <script src="assets/js/header.js"></script>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="row">
+                                <!-- Area Chart -->
+                                <div class="col-6">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Monthly Portfolio Value</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart-area">
+                                                <canvas id="myAreaChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            
+                                <!-- Pie Chart -->
+                                <div class="col-6">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Pie Chart (in %)</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart-pie pt-4">
+                                                <canvas id="myPieChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Crypto Portfolio</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="cryptoTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Crypto</th>
+                                                    <th>Amount (Units)</th>
+                                                    <th>Price (USD)</th>
+                                                    <th>Storage</th>
+                                                    <th>Date of Buying</th>
+                                                    <th>Total Value (USD)</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-body">
+                                                
+                                            </tbody>
+                                        </table>                                      
+                                        <button id="addRowBtn" class="btn btn-primary mt-3">Add Row</button>
+                                    </div>
+                                </div>
+                            </div>                            
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js"></script>                   <!-- DONE -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>        <!-- DONE -->
+
+    <!-- Core plugin JavaScript-->
+    <script src="assets/js/jquery.easing.min.js"></script>          <!-- DONE -->
+
+    <!-- Custom scripts for all pages-->
+    <script src="assets/js/sb-admin-2.min.js"></script>             <!-- DONE -->
+
+    <!-- Page level plugins -->
+    <script src="assets/js/Chart.min.js"></script>                  <!-- DONE -->                
+
+    <!-- Page level custom scripts -->
+    <script src="js2/demo/chart-area-demo.js"></script>             <!-- DONE -->
+    <script src="js2/demo/chart-pie-demo.js"></script>              <!-- DONE -->
+    <script src="js2/demo/chart-bar-demo.js"></script>              <!-- DONE -->
+    <script src="assets/js/main.js"></script>                        <!-- DONE -->
+    <script src="assets/js/header.js"></script>                     <!-- DONE -->
+    <script>
+          const tableBody = document.getElementById('table-body');
+        const addRowBtn = document.getElementById('addRowBtn');
+        const pieChartData = {}; // To track distribution by storage
+        const portfolioPerformance = []; // To track overall performance over time
+    
+
+    </script>    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const tableBody = document.getElementById('table-body');
+  const addRowBtn = document.getElementById('addRowBtn');
+  const COINGECKO_API_URL = 'https://api.coingecko.com/api/v3';
+  let cryptoList = [];
+
+  // Fetch crypto list on page load
+  async function fetchCryptoList() {
+      try {
+          const response = await fetch(`${COINGECKO_API_URL}/coins/list`);
+          cryptoList = await response.json();
+      } catch (error) {
+          console.error('Error fetching crypto list:', error);
+      }
+  }
+  fetchCryptoList();
+
+  // Add a new row to the table
+  addRowBtn.addEventListener('click', addRow);
+
+    
+    // Initialize the table and load crypto list
+    fetchCryptoList();
+      
+
+  function addRow() {
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+          <td><input type="text" class="form-control crypto-name" placeholder="e.g., bitcoin"></td>
+          <td><input type="number" class="form-control crypto-amount" placeholder="e.g., 10"></td>
+          <td class="crypto-price">Fetching...</td>
+          <td><input type="text" class="form-control crypto-storage" placeholder="e.g., Binance"></td>
+          <td><input type="date" class="form-control crypto-date"></td>
+          <td class="crypto-total">0.00</td>
+          <td><button class="btn btn-danger remove-row-btn">Remove</button></td>
+      `;
+      tableBody.appendChild(newRow);
+
+      const cryptoNameField = newRow.querySelector('.crypto-name');
+      const cryptoAmountField = newRow.querySelector('.crypto-amount');
+      const priceCell = newRow.querySelector('.crypto-price');
+      const storageField = newRow.querySelector('.crypto-storage');
+      const totalCell = newRow.querySelector('.crypto-total');
+      const removeBtn = newRow.querySelector('.remove-row-btn');
+
+      // Input listeners
+      cryptoNameField.addEventListener('input', () => fetchPrice(cryptoNameField, priceCell, totalCell, cryptoAmountField));
+      cryptoAmountField.addEventListener('input', () => updateTotal(priceCell, totalCell, cryptoAmountField));
+      storageField.addEventListener('input', updatePieChart); // Trigger Pie Chart update
+      cryptoAmountField.addEventListener('input', updatePieChart); // Trigger Pie Chart update
+      removeBtn.addEventListener('click', () => {
+          newRow.remove();
+          updatePieChart(); // Update Pie Chart on row removal
+      });
+  }
+
+  // Fetch crypto price and update the table
+  async function fetchPrice(cryptoNameField, priceCell, totalCell, amountField) {
+      const input = cryptoNameField.value.toLowerCase().trim();
+      if (!input) return;
+
+      const match = cryptoList.find(crypto => crypto.symbol === input || crypto.id === input);
+      if (!match) {
+          priceCell.textContent = 'Not Found';
+          return;
+      }
+
+      try {
+          const response = await fetch(`${COINGECKO_API_URL}/simple/price?ids=${match.id}&vs_currencies=usd`);
+          const data = await response.json();
+
+          if (data[match.id] && data[match.id].usd) {
+              const price = data[match.id].usd;
+              priceCell.textContent = price.toFixed(2);
+              updateTotal(priceCell, totalCell, amountField);
+              updatePieChart(); // Trigger Pie Chart update
+          } else {
+              priceCell.textContent = 'Error';
+          }
+      } catch (error) {
+          console.error('Error fetching price:', error);
+          priceCell.textContent = 'Error';
+      }
+  }
+
+  // Update the total value (USD)
+  function updateTotal(priceCell, totalCell, amountField) {
+      const price = parseFloat(priceCell.textContent) || 0;
+      const amount = parseFloat(amountField.value) || 0;
+      totalCell.textContent = (price * amount).toFixed(2);
+  }
+});
+    </script>
+
+</body>
+
+</html>

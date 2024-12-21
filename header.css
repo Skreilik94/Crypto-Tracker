@@ -1,0 +1,74 @@
+/* Header Base Styles */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.9); /* Semi-transparent background */
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 1em;
+    text-align: center;
+}
+
+/* Header Title */
+#header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+#header h1 a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Navigation Menu */
+#nav {
+    margin-top: 0em;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#nav ul li {
+    margin: 0;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+#nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Hover effect */
+    border-radius: 0.5em;
+}
+
+#dataTable {
+    border: 1px solid #ddd;
+    margin-top: 1em;
+}
+
+#dataTable th,
+#dataTable td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#addRowBtn {
+    display: block;
+    margin: 0 auto;
+}
